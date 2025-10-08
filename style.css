@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --alumniSans: "Alumni Sans", sans-serif;
+}
+* {
+    font-family: var(--alumniSans);
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #ededee;
+}
+header {
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+header > ul {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    box-sizing: border-box;
+}
+header > ul > li {
+    font-size: 25px;
+    font-weight: 700;
+}
+.mainFrontpage {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-inline: 5%;
+}
+.pedestalDiv {
+    position: relative;
+    width: 100%;
+}
+.cardContainer {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    transform: rotate(10deg);
+    top: 30%;
+    right: 31%;
+}
+#cardCrop {
+    transform-style: preserve-3d;
+    animation: rotate3D 5s linear infinite;
+    transform-origin: center;
+    height: auto;
+    
+    width: 80%;
+}
+.bigLetter {
+    font-size: 100px;
+}
+.pedestalImg > img {
+    width: 100%;
+    height: auto;
+}
+@keyframes rotate3D {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        
+        transform: translateY(18px);
+        
+    }
+    50% {
+        
+        transform: translateY(20px);
+        
+    }
+    100% {
+        transform: translateY(0px);
+
+    }
+  }
+@keyframes spin {
+  0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+      transform: rotateX(0deg) rotateY(180deg);
+    }
+    100% {
+      transform: rotateX(00deg) rotateY(360deg);
+    }
+}
